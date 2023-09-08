@@ -27,9 +27,6 @@ def display_clock_and_text():
         
         print(("  " * 120  +  clock))
 
-        # Sleep for one second before updating again
-        time.sleep(1)
-
 # Call the function to display the clock and text
 display_clock_and_text()
 
@@ -149,7 +146,7 @@ center("2 - Administrator")
 selection = input("Enter your selection number: ")
 # Function to log attendance
 def log_attendance(employee_id, time_in):
-    conn = sqlite3.connect('database.db')  # Connect to the SQLite database
+    conn = sqlite3.connect('database.db') 
     cursor = conn.cursor()
 
     # Create the 'attendance' table if it doesn't exist
